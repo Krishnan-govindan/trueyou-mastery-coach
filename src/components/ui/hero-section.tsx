@@ -13,9 +13,9 @@ const HeroSection = () => {
           {/* Hero Content */}
           <div className="text-center lg:text-left animate-fade-in">
             {/* Trust Badge */}
-            <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary-foreground px-4 py-2 rounded-full text-sm font-medium mb-6 animate-scale-in">
+            <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary-foreground px-6 py-3 rounded-full text-sm font-semibold mb-6 animate-scale-in pulse-glow">
               <Star className="w-4 h-4" />
-              Engineer, Scientist, Your Sis Coach & Mentor
+              Dr. R Taraneh - Engineer, Scientist, Your Sis Coach & Mentor
             </div>
 
             {/* Main Headline */}
@@ -60,26 +60,26 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Hero Image */}
-          <div className="relative animate-scale-in" style={{ animationDelay: '0.8s' }}>
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            {/* Hero Image */}
+          <div className="relative animate-scale-in floating-animation" style={{ animationDelay: '0.8s' }}>
+            <div className="relative rounded-3xl overflow-hidden shadow-2xl ring-2 ring-secondary/20">
               <img 
                 src={heroImage} 
-                alt="Dr. R Taraneh - Professional Coach & Mentor" 
+                alt="Dr. R Taraneh - Professional Life Coach, Engineer & Scientist" 
                 className="w-full h-auto object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/30 via-transparent to-secondary/10" />
             </div>
             
-            {/* Floating Achievement Cards */}
-            <div className="absolute -top-4 -right-4 bg-card border border-border rounded-lg p-4 shadow-lg animate-fade-in" style={{ animationDelay: '1s' }}>
-              <div className="text-2xl font-bold text-secondary">5-Min</div>
-              <div className="text-sm text-muted-foreground">Daily Transformation</div>
+            {/* Floating Achievement Cards with Enhanced Animations */}
+            <div className="absolute -top-6 -right-6 bg-card border-2 border-secondary/30 rounded-xl p-5 shadow-2xl animate-fade-in pulse-glow" style={{ animationDelay: '1s' }}>
+              <div className="text-3xl font-bold text-gradient-gold">5-Min</div>
+              <div className="text-sm font-medium text-muted-foreground">Daily Transformation</div>
             </div>
             
-            <div className="absolute -bottom-4 -left-4 bg-card border border-border rounded-lg p-4 shadow-lg animate-fade-in" style={{ animationDelay: '1.2s' }}>
-              <div className="text-2xl font-bold text-primary">@TrueYouMastery</div>
-              <div className="text-sm text-muted-foreground">YouTube Channel</div>
+            <div className="absolute -bottom-6 -left-6 bg-card border-2 border-primary/30 rounded-xl p-5 shadow-2xl animate-fade-in" style={{ animationDelay: '1.2s' }}>
+              <div className="text-2xl font-bold text-gradient-premium">@TrueYouMastery</div>
+              <div className="text-sm font-medium text-muted-foreground">YouTube Channel</div>
             </div>
           </div>
         </div>

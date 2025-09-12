@@ -15,9 +15,17 @@ const Navigation = () => {
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      });
     }
     setIsMenuOpen(false);
+  };
+
+  const handleBookingClick = () => {
+    // You can integrate with actual booking system here
+    window.open('https://calendly.com/true-you-mastery', '_blank');
   };
 
   return (
@@ -43,7 +51,7 @@ const Navigation = () => {
                   {item.name}
                 </button>
               ))}
-              <Button className="btn-hero">
+              <Button className="btn-hero" onClick={handleBookingClick}>
                 <Calendar className="mr-2 w-4 h-4" />
                 Book Discovery Call
               </Button>
@@ -82,7 +90,7 @@ const Navigation = () => {
               </button>
             ))}
             <div className="pt-4">
-              <Button className="w-full btn-hero">
+              <Button className="w-full btn-hero" onClick={handleBookingClick}>
                 <Calendar className="mr-2 w-4 h-4" />
                 Book Discovery Call
               </Button>

@@ -9,22 +9,37 @@ const YouTubeSection = () => {
       title: "5-Minute Morning Mindset Reset for High Achievers",
       duration: "5:32",
       views: "12K",
-      thumbnail: "https://img.youtube.com/vi/placeholder1/maxresdefault.jpg",
-      description: "Transform your morning routine with this powerful mindset engineering technique."
+      videoId: "VyruRJZHSe0",
+      thumbnail: "https://img.youtube.com/vi/VyruRJZHSe0/maxresdefault.jpg",
+      description: "Transform your morning routine with this powerful mindset engineering technique.",
+      url: "https://youtu.be/VyruRJZHSe0?si=UYnyShjEDBg289yh"
     },
     {
       title: "From Engineer to Entrepreneur: My Transformation Story",
       duration: "15:42",
       views: "8.5K",
-      thumbnail: "https://img.youtube.com/vi/placeholder2/maxresdefault.jpg",
-      description: "The complete journey of building myself from scratch and how you can too."
+      videoId: "1AsDy67c2Go",
+      thumbnail: "https://img.youtube.com/vi/1AsDy67c2Go/maxresdefault.jpg",
+      description: "The complete journey of building myself from scratch and how you can too.",
+      url: "https://youtu.be/1AsDy67c2Go?si=5OgJBM6z5CgXn_pS"
     },
     {
       title: "Confidence Building Secrets for Career Success",
       duration: "9:18",
       views: "15K",
-      thumbnail: "https://img.youtube.com/vi/placeholder3/maxresdefault.jpg",
-      description: "Proven strategies to build unshakeable confidence in your professional life."
+      videoId: "EEYIOruFmLA",
+      thumbnail: "https://img.youtube.com/vi/EEYIOruFmLA/maxresdefault.jpg",
+      description: "Proven strategies to build unshakeable confidence in your professional life.",
+      url: "https://youtu.be/EEYIOruFmLA?si=mCqMhLh1T43Cmw_R"
+    },
+    {
+      title: "Advanced Mindset Engineering Techniques",
+      duration: "12:25",
+      views: "9.8K",
+      videoId: "mqrkhfzSTN8",
+      thumbnail: "https://img.youtube.com/vi/mqrkhfzSTN8/maxresdefault.jpg",
+      description: "Deep dive into advanced techniques for mastering your mindset and achieving breakthrough results.",
+      url: "https://youtu.be/mqrkhfzSTN8?si=kYdZaem9ZMZg6mDj"
     }
   ];
 
@@ -56,25 +71,35 @@ const YouTubeSection = () => {
         </div>
 
         {/* Featured Videos Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-8 mb-12">
           {featuredVideos.map((video, index) => (
-            <Card key={index} className="card-hover border-border/50 overflow-hidden group">
-              <div className="relative aspect-video bg-muted">
-                {/* Video Thumbnail Placeholder */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center">
-                  <Play className="w-16 h-16 text-white/80 group-hover:scale-110 transition-transform" />
+            <Card key={index} className="card-hover border-border/50 overflow-hidden group cursor-pointer" onClick={() => window.open(video.url, '_blank')}>
+              <div className="relative aspect-video bg-muted overflow-hidden">
+                {/* Real Video Thumbnail */}
+                <img 
+                  src={video.thumbnail} 
+                  alt={video.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                
+                {/* Play Button Overlay */}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-2xl">
+                    <Play className="w-8 h-8 text-white fill-white ml-1" />
+                  </div>
                 </div>
                 
                 {/* Video Stats */}
                 <div className="absolute top-3 right-3 flex gap-2">
-                  <Badge variant="secondary" className="text-xs">
+                  <Badge variant="secondary" className="text-xs bg-black/70 text-white border-none">
                     <Clock className="w-3 h-3 mr-1" />
                     {video.duration}
                   </Badge>
                 </div>
                 
                 <div className="absolute bottom-3 left-3">
-                  <Badge variant="outline" className="text-xs bg-black/50 text-white border-white/20">
+                  <Badge variant="outline" className="text-xs bg-black/70 text-white border-white/20">
                     <Eye className="w-3 h-3 mr-1" />
                     {video.views} views
                   </Badge>
@@ -82,17 +107,21 @@ const YouTubeSection = () => {
               </div>
 
               <CardContent className="p-6">
-                <h3 className="font-semibold mb-2 leading-tight">{video.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <h3 className="font-semibold mb-2 leading-tight line-clamp-2">{video.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
                   {video.description}
                 </p>
                 
                 <Button 
                   variant="ghost" 
                   size="sm" 
-                  className="mt-4 p-0 h-auto text-primary hover:text-primary-hover"
+                  className="mt-4 p-0 h-auto text-red-600 hover:text-red-700 font-semibold"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    window.open(video.url, '_blank');
+                  }}
                 >
-                  Watch Video
+                  Watch Now
                   <ExternalLink className="ml-2 w-4 h-4" />
                 </Button>
               </CardContent>
@@ -138,14 +167,14 @@ const YouTubeSection = () => {
           </div>
         </div>
 
-        {/* Embedded Channel Preview */}
+        {/* Featured Video Embed */}
         <div className="mt-16">
-          <h3 className="text-2xl font-bold text-center mb-8">Latest from @TrueYouMastery</h3>
-          <div className="aspect-video bg-muted rounded-2xl overflow-hidden shadow-lg">
+          <h3 className="text-2xl font-bold text-center mb-8">Featured Transformation Video</h3>
+          <div className="aspect-video bg-muted rounded-2xl overflow-hidden shadow-2xl max-w-4xl mx-auto">
             <iframe
               className="w-full h-full"
-              src="https://www.youtube.com/embed/videoseries?list=UU_channel_id_placeholder"
-              title="True You Mastery YouTube Channel"
+              src="https://www.youtube.com/embed/VyruRJZHSe0"
+              title="5-Minute Morning Mindset Reset for High Achievers"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

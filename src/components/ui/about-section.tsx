@@ -41,11 +41,11 @@ const AboutSection = () => {
             About Dr. R
           </Badge>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Built Myself From Scratch,
-            <span className="block text-gradient-gold">Now I Help You Do The Same</span>
+            Meet Dr. R Taraneh
+            <span className="block text-gradient-gold">Built Myself From Scratch, Now I Help You Do The Same</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            As an engineer, scientist, and innovation advisor, I understand the unique challenges 
+            As Dr. R Taraneh, an engineer, scientist, and innovation advisor, I understand the unique challenges 
             high achievers face. I've transformed my own life and now I'm here as your sis mentor 
             to guide your transformation journey.
           </p>
@@ -54,14 +54,14 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
           {/* Story Content */}
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold text-primary mb-4">My Transformation Story</h3>
+            <h3 className="text-2xl font-bold text-primary mb-4">Dr. R Taraneh's Transformation Story</h3>
             <p className="text-muted-foreground leading-relaxed">
               I started as an engineer with big dreams but limiting beliefs. Through my journey 
               in tech, startups, and scientific research, I discovered the power of mindset 
               engineering - the intersection of analytical thinking and personal growth.
             </p>
             <p className="text-muted-foreground leading-relaxed">
-              Today, I combine my technical background with proven coaching methodologies to 
+              Today, as Dr. R Taraneh, I combine my technical background with proven coaching methodologies to 
               help ambitious minds like yours breakthrough barriers and achieve extraordinary success.
             </p>
             

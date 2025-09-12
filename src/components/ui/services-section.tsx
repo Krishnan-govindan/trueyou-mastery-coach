@@ -143,13 +143,6 @@ const ServicesSection = () => {
                   ))}
                 </ul>
 
-                <Button 
-                  variant="outline" 
-                  className="w-full group hover:bg-primary hover:text-primary-foreground"
-                >
-                  Learn More
-                  <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </Button>
               </CardContent>
             </Card>
           ))}
@@ -166,12 +159,9 @@ const ServicesSection = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="btn-hero group">
+            <Button className="btn-hero group" onClick={() => window.open('https://calendly.com/true-you-mastery', '_blank')}>
               Book Free Discovery Call
               <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
-            </Button>
-            <Button variant="outline" size="lg" className="text-primary border-primary hover:bg-primary hover:text-primary-foreground">
-              View Success Stories
             </Button>
           </div>
         </div>
