@@ -5,16 +5,18 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/trueyou-mastery-coach/",           // ← GitHub Pages base (repo name)
+  // Use repo name as base on GitHub Pages (production), "/" in dev
+  base: mode === "production" ? "/trueyou-mastery-coach/" : "/",
   server: { host: "::", port: 8080 },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
     alias: { "@": path.resolve(__dirname, "./src") },
   },
   build: {
-    outDir: "dist",                           // ← Actions workflow will publish this
+    outDir: "dist",
     target: "es2018",
     sourcemap: false,
     minify: "esbuild",
+    emptyOutDir: true,
   },
 }));
