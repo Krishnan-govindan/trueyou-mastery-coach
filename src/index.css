@@ -9,14 +9,14 @@ All colors MUST be HSL.
 @layer base {
   :root {
 /* Enhanced True You Mastery Brand Colors */
-    --background: 213 27% 97%;
-    --foreground: 215 30% 12%;
+    --background: 213 20% 94%;
+    --foreground: 215 25% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 215 30% 12%;
+    --card: 213 15% 96%;
+    --card-foreground: 215 25% 18%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 30% 12%;
+    --popover: 213 15% 96%;
+    --popover-foreground: 215 25% 18%;
 
     /* Rich Navy Primary - Deeper Professional Authority */
     --primary: 215 100% 18%;
@@ -31,18 +31,18 @@ All colors MUST be HSL.
     --secondary-glow: 43 96% 65%;
 
     /* Sophisticated Neutrals */
-    --muted: 213 22% 94%;
-    --muted-foreground: 215 18% 52%;
+    --muted: 213 18% 90%;
+    --muted-foreground: 215 15% 45%;
 
-    --accent: 213 25% 92%;
-    --accent-foreground: 215 30% 12%;
+    --accent: 213 20% 88%;
+    --accent-foreground: 215 25% 18%;
 
     /* Premium Brand Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(215 100% 18%), hsl(215 85% 30%), hsl(215 70% 45%));
     --gradient-gold: linear-gradient(135deg, hsl(43 96% 56%), hsl(43 96% 65%), hsl(45 100% 70%));
-    --gradient-subtle: linear-gradient(180deg, hsl(213 27% 97%), hsl(213 22% 94%));
+    --gradient-subtle: linear-gradient(180deg, hsl(213 20% 94%), hsl(213 18% 90%));
     --gradient-premium: linear-gradient(135deg, hsl(215 100% 18%) 0%, hsl(43 96% 56%) 100%);
-    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(213 25% 98%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(213 15% 96%) 0%, hsl(213 20% 92%) 100%);
 
     /* Luxury Shadows & Effects */
     --shadow-elegant: 0 20px 40px -10px hsl(215 100% 18% / 0.15);
