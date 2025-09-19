@@ -34,7 +34,7 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-              <Button className="btn-hero group">
+              <Button className="bg-cta-red hover:bg-cta-red-hover text-cta-red-foreground shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 px-8 py-4 text-lg font-bold rounded-xl group">
                 Book Your Free Discovery Call
                 <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
               </Button>

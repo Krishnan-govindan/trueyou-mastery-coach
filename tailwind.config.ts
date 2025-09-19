@@ -59,6 +59,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "cta-red": {
+          DEFAULT: "hsl(var(--cta-red))",
+          foreground: "hsl(var(--cta-red-foreground))",
+          hover: "hsl(var(--cta-red-hover))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",

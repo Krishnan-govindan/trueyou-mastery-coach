@@ -50,6 +50,11 @@ All colors MUST be HSL.
     --shadow-premium: 0 25px 50px -12px hsl(215 100% 18% / 0.3);
     --shadow-glow: 0 0 50px hsl(43 96% 56% / 0.4);
 
+    /* CTA Red Colors */
+    --cta-red: 0 84% 60%;
+    --cta-red-foreground: 0 0% 100%;
+    --cta-red-hover: 0 84% 55%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
